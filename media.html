@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Media | ACM DeGreat</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #050505;
+      color: white;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #777;
+    }
+
+    header h1 {
+      color: #d4af37;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #ccc;
+    }
+
+    nav {
+      margin-top: 18px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      color: #d4af37;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #ccc;
+      line-height: 1.7;
+    }
+
+    .media-section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px 70px;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #d4af37;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+    }
+
+    .media-card {
+      background: #111;
+      border: 1px solid #555;
+      border-radius: 15px;
+      overflow: hidden;
+      padding-bottom: 18px;
+    }
+
+    .media-card img,
+    .media-card video {
+      width: 100%;
+      display: block;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      background: #222;
+    }
+
+    .media-card h3 {
+      color: #d4af37;
+      margin: 15px;
+    }
+
+    .media-card p {
+      color: #bbb;
+      margin: 0 15px;
+      line-height: 1.5;
+    }
+
+    .empty {
+      text-align: center;
+      border: 1px dashed #666;
+      border-radius: 15px;
+      padding: 45px 20px;
+      color: #aaa;
+      margin-bottom: 50px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      border-top: 1px solid #444;
+      color: #aaa;
+    }
+
+    .gold {
+      color: #d4af37;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>ACM DeGreat</h1>
+    <p>Entrepreneur • Creator • Innovator • Artist</p>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="media.html">Media</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>My Media</h2>
+    <p>
+      Welcome to my media space — a collection of my journey,
+      projects, ideas, achievements, photos and videos.
+    </p>
+  </section>
+
+  <section class="media-section">
+
+    <h2 class="section-title">📸 Photos</h2>
+
+    <div class="empty">
+      <h3 class="gold">Your photos will appear here</h3>
+      <p>
+        This section is ready for your pictures, projects,
+        achievements and important moments.
+      </p>
+    </div>
+
+    <h2 class="section-title">🎥 Videos</h2>
+
+    <div class="empty">
+      <h3 class="gold">Your videos will appear here</h3>
+      <p>
+        This section is ready for your YouTube videos,
+        project videos and other creative content.
+      </p>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 <span class="gold">ACM DeGreat</span>. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
