@@ -1,0 +1,775 @@
+/* ================================
+   ACMDeGreat PERSONAL WEBSITE
+   Black • Silver • Gold • Blue • Red
+   WhatsApp Green
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #050505;
+  color: #f2f2f2;
+  line-height: 1.7;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 7%;
+
+  background: rgba(0, 0, 0, 0.95);
+  border-bottom: 1px solid #333;
+
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.logo span {
+  color: #d4af37;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 22px;
+}
+
+.navbar nav a {
+  color: #cfcfcf;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #d4af37;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+  min-height: 92vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 80px 7%;
+
+  background:
+    radial-gradient(circle at top right, rgba(0, 89, 255, 0.15), transparent 35%),
+    radial-gradient(circle at bottom left, rgba(212, 175, 55, 0.12), transparent 35%),
+    #050505;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.welcome {
+  color: #d4af37;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 9vw, 90px);
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #d4af37;
+}
+
+.hero h2 {
+  font-size: clamp(22px, 4vw, 40px);
+  color: #e6e6e6;
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  color: #4da3ff;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.hero-description {
+  max-width: 650px;
+  margin: auto;
+  color: #aaa;
+  font-size: 17px;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.hero-buttons,
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+
+  padding: 13px 24px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.primary {
+  background: linear-gradient(135deg, #d4af37, #f5d76e);
+  color: #000;
+}
+
+.primary:hover {
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+.secondary {
+  border: 1px solid #777;
+  color: #fff;
+  background: #111;
+}
+
+.secondary:hover {
+  border-color: #4da3ff;
+  color: #4da3ff;
+}
+
+
+/* ================================
+   SECTIONS
+================================ */
+
+.section {
+  padding: 90px 7%;
+  background: #080808;
+}
+
+.dark-section {
+  background: #020202;
+}
+
+.section-title {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.section-title p {
+  color: #4da3ff;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+.section-title h2 {
+  font-size: clamp(30px, 5vw, 48px);
+  color: #d4af37;
+}
+
+
+/* ================================
+   ABOUT
+================================ */
+
+.about-card {
+  max-width: 850px;
+  margin: auto;
+
+  padding: 35px;
+
+  background: linear-gradient(145deg, #111, #080808);
+
+  border: 1px solid #333;
+  border-left: 3px solid #d4af37;
+
+  border-radius: 14px;
+
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+}
+
+.about-card p {
+  color: #c7c7c7;
+  margin-bottom: 20px;
+}
+
+.about-card p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ================================
+   CARDS
+================================ */
+
+.cards {
+  max-width: 1100px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card {
+  padding: 30px;
+
+  background: linear-gradient(145deg, #121212, #080808);
+
+  border: 1px solid #333;
+  border-radius: 14px;
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #d4af37;
+
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.1);
+}
+
+.card h3 {
+  color: #d4af37;
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.card p {
+  color: #aaa;
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+
+/* ================================
+   COMMUNITY
+================================ */
+
+.community-section {
+  background:
+    radial-gradient(circle at center, rgba(37, 211, 102, 0.06), transparent 45%),
+    #080808;
+}
+
+.community-card {
+  max-width: 850px;
+  margin: auto;
+
+  text-align: center;
+
+  padding: 45px 30px;
+
+  background: linear-gradient(145deg, #111, #050505);
+
+  border: 1px solid #333;
+  border-top: 2px solid #25D366;
+
+  border-radius: 16px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.community-icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.community-card h3 {
+  color: #d4af37;
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+
+.community-card p {
+  max-width: 700px;
+  margin: 0 auto 18px;
+  color: #bdbdbd;
+}
+
+
+/* ================================
+   WHATSAPP
+================================ */
+
+.whatsapp {
+  background: #25D366;
+  color: #ffffff;
+}
+
+.whatsapp:hover {
+  background: #20bd5a;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.25);
+}
+
+
+/* ================================
+   MUSIC
+================================ */
+
+.music-card {
+  max-width: 750px;
+  margin: auto;
+
+  text-align: center;
+
+  padding: 40px;
+
+  background: #101010;
+
+  border: 1px solid #333;
+  border-bottom: 2px solid #d4af37;
+
+  border-radius: 15px;
+}
+
+.music-card h3 {
+  color: #d4af37;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.music-card p {
+  color: #aaa;
+  margin-bottom: 25px;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+.contact-card {
+  max-width: 750px;
+  margin: auto;
+
+  text-align: center;
+
+  padding: 40px;
+
+  background: #101010;
+
+  border: 1px solid #333;
+  border-radius: 15px;
+}
+
+.contact-card p {
+  color: #bbb;
+}
+
+
+/* ================================
+   SOCIAL MEDIA
+================================ */
+
+.social-section {
+  text-align: center;
+
+  padding: 70px 7%;
+
+  background: #000;
+
+  border-top: 1px solid #222;
+}
+
+.social-section h2 {
+  color: #d4af37;
+  margin-bottom: 25px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.social-links a {
+  color: #cfcfcf;
+  text-decoration: none;
+
+  padding: 10px 16px;
+
+  border: 1px solid #444;
+  border-radius: 7px;
+
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+  border-color: #4da3ff;
+  background: #111;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+  text-align: center;
+
+  padding: 40px 7%;
+
+  background: #000;
+
+  border-top: 1px solid #222;
+}
+
+footer p {
+  color: #999;
+  margin-top: 10px;
+}
+
+.copyright {
+  font-size: 13px;
+  color: #666;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 800px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero {
+    min-height: 85vh;
+    padding-top: 60px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card,
+  .community-card,
+  .music-card,
+  .contact-card {
+    padding: 28px 20px;
+  }
+
+  .hero-buttons,
+  .contact-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    text-align: center;
+  }
+
+}
+
+
+/* ================================
+   SMALL PHONES
+================================ */
+
+@media (max-width: 420px) {
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .section {
+    padding: 70px 5%;
+  }
+
+}
+/* ================================
+   SOCIAL MEDIA ICONS
+================================ */
+
+.social-intro {
+  color: #999;
+  margin-bottom: 30px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.social-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  text-decoration: none;
+
+  font-size: 27px;
+  font-weight: bold;
+
+  color: #ffffff;
+
+  background: #111;
+
+  border: 2px solid #333;
+
+  transition: 0.3s ease;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.social-icon:hover {
+  transform: translateY(-6px) scale(1.08);
+}
+
+
+/* X */
+
+.x-icon {
+  background: #000;
+  border-color: #777;
+}
+
+
+/* WhatsApp */
+
+.whatsapp-icon {
+  background: #25D366;
+  border-color: #25D366;
+}
+
+
+/* YouTube */
+
+.youtube-icon {
+  background: #ff0000;
+  border-color: #ff0000;
+}
+
+
+/* TikTok */
+
+.tiktok-icon {
+  background: #080808;
+  border-color: #ffffff;
+}
+
+
+/* Instagram */
+
+.instagram-icon {
+  background: linear-gradient(
+    135deg,
+    #833ab4,
+    #fd1d1d,
+    #fcb045
+  );
+  border-color: #ffffff;
+}
+
+
+/* Facebook */
+
+.facebook-icon {
+  background: #1877F2;
+  border-color: #1877F2;
+}
+
+
+/* Audiomack */
+
+.audiomack-icon {
+  background: #111;
+  border-color: #d4af37;
+  color: #d4af37;
+}
+
+
+/* Mobile social icons */
+
+@media (max-width: 420px) {
+
+  .social-icons {
+    gap: 12px;
+  }
+
+  .social-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 24px;
+  }
+
+}
+/* =========================
+   ACM DEGREAT ADMIN DASHBOARD
+   ========================= */
+
+.admin-page {
+  min-height: 100vh;
+  background: #050505;
+  color: #ffffff;
+  padding: 50px 20px;
+}
+
+.admin-header {
+  max-width: 1000px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.admin-header .small-title {
+  color: #d4af37;
+  letter-spacing: 3px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.admin-header h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.admin-header p {
+  color: #bdbdbd;
+  line-height: 1.6;
+}
+
+.admin-grid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.admin-card {
+  background: #111111;
+  border: 1px solid #555555;
+  border-radius: 18px;
+  padding: 30px 25px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.admin-card:hover {
+  transform: translateY(-5px);
+  border-color: #d4af37;
+}
+
+.admin-icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.admin-card h2 {
+  color: #d4af37;
+  margin-bottom: 12px;
+}
+
+.admin-card p {
+  color: #bdbdbd;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.admin-card button {
+  background: #d4af37;
+  color: #050505;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.admin-card button:hover {
+  background: #ffffff;
+}
+
+.admin-back {
+  text-align: center;
+  margin-top: 45px;
+}
+
+.admin-back a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.admin-back a:hover {
+  color: #ffffff;
+}
