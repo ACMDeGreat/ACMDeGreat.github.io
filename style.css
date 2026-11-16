@@ -491,14 +491,25 @@ footer p {
 
   .navbar {
     flex-direction: column;
-    gap: 15px;
+    gap: 8px;
+    padding: 12px 5%;
+  }
+
+  .logo {
+    font-size: 21px;
   }
 
   .navbar nav {
+    width: 100%;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 8px;
   }
+
+  .navbar nav a {
+    font-size: 13px;
+  }
+
 
   .hero {
     min-height: 85vh;
