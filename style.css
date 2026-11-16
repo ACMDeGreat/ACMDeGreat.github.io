@@ -783,4 +783,80 @@ footer p {
 
 .admin-back a:hover {
   color: #ffffff;
+} 
+
+/* =================================
+   ACMDEGREAT MEDIA SECTION
+   BLUE • RED • GREEN
+================================= */
+
+.media-section {
+  background: #050505;
 }
+
+.media-section .section-title h2 {
+  color: #087BFF;
+}
+
+.media-section .section-title p {
+  color: #16A34A;
+}
+
+.media-intro {
+  max-width: 700px;
+  margin: -25px auto 35px;
+  text-align: center;
+  color: #bbb;
+}
+
+.media-gallery {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.media-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 55px 20px;
+  background: #101010;
+  border: 1px solid #087BFF;
+  border-radius: 15px;
+}
+
+.media-empty-icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.media-empty h3 {
+  color: #16A34A;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.media-empty p {
+  color: #bbb;
+  max-width: 500px;
+  margin: auto;
+}
+
+@media (max-width: 800px) {
+  .media-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .media-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .media-empty {
+    padding: 40px 15px;
+  }
+}
+
+/* END ACMDEGREAT MEDIA SECTION */
