@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACMDeGreat Media Admin</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #050505;
+  color: white;
+  line-height: 1.6;
+}
+
+header {
+  padding: 22px 6%;
+  background: #101010;
+  border-bottom: 2px solid #087BFF;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #087BFF;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 35px 20px;
+}
+
+.welcome {
+  margin-bottom: 30px;
+}
+
+.welcome h1 {
+  color: #087BFF;
+  margin-bottom: 8px;
+}
+
+.welcome p {
+  color: #aaa;
+}
+
+.status {
+  background: #111;
+  padding: 14px;
+  border-left: 4px solid #16A34A;
+  margin-bottom: 25px;
+  color: #bbb;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.panel {
+  background: #111;
+  padding: 24px;
+  border: 1px solid #333;
+  border-radius: 12px;
+}
+
+.panel h2 {
+  margin-bottom: 15px;
+  font-size: 19px;
+}
+
+.blue { color: #087BFF; }
+.red { color: #E32636; }
+.green { color: #16A34A; }
+
+input, textarea {
+  width: 100%;
+  padding: 13px;
+  margin: 10px 0;
+  border-radius: 7px;
+  border: 1px solid #444;
+  background: #080808;
+  color: white;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.blue-btn { background: #087BFF; }
+.red-btn { background: #E32636; }
+.green-btn { background: #16A34A; }
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.preview {
+  margin-top: 25px;
+  background: #111;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid #333;
+}
+
+.preview h2 {
+  color: #16A34A;
+  margin-bottom: 12px;
+}
+
+#photoName {
+  color: #aaa;
+  font-size: 13px;
+}
+
+@media(max-width:600px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    ACM<span>DeGreat</span> MEDIA ADMIN
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="welcome">
+    <h1>Media Dashboard</h1>
+    <p>Manage your photos, videos and creative content.</p>
+  </div>
+
+  <div class="status">
+    Media storage connection pending.
+    Complete the setup before publishing.
+  </div>
+
+  <div class="dashboard-grid">
+
+    <section class="panel">
+      <h2 class="blue">📸 Add Photo</h2>
+
+      <input type="text"
+        id="photoTitle"
+        placeholder="Photo title">
+
+      <textarea id="photoDescription"
+        placeholder="Photo description"></textarea>
+
+      <input type="file"
+        id="photoFile"
+        accept="image/*">
+
+      <p id="photoName">No photo selected</p>
+
+      <button class="blue-btn" disabled>
+        Upload Photo
+      </button>
+    </section>
+
+    <section class="panel">
+      <h2 class="red">▶ Add YouTube Video</h2>
+
+      <input type="text"
+        id="videoTitle"
+        placeholder="Video title">
+
+      <textarea id="videoDescription"
+        placeholder="Video description"></textarea>
+
+      <input type="url"
+        id="youtubeLink"
+        placeholder="Paste YouTube video link">
+
+      <button class="red-btn" disabled>
+        Publish Video
+      </button>
+    </section>
+
+  </div>
+
+  <section class="preview">
+    <h2>Media Management</h2>
+    <p>Published photos and videos will appear here after the storage system is connected.</p>
+    <button class="green-btn" disabled>
+      Manage Published Media
+    </button>
+  </section>
+
+  <section class="preview">
+    <h2>Website Connection</h2>
+    <p>Public gallery: ACMDeGreat Official Website</p>
+    <a href="https://acmdegreat.github.io/#media"
+       style="color:#087BFF">
+       View Public Media Gallery
+    </a>
+  </section>
+
+</main>
+
+<script>
+const photoFile = document.getElementById("photoFile");
+
+photoFile.addEventListener("change", function() {
+  document.getElementById("photoName").textContent =
+    this.files.length ? this.files[0].name : "No photo selected";
+});
+</script>
+
+</body>
+</html>
